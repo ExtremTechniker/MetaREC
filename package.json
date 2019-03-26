@@ -1,7 +1,7 @@
 {
   "name": "metarec",
   "version": "1.0.0",
-  "description": "Enhance your recording with metadata",
+  "description": "Enhances your recording with metadata",
   "main": "index.js",
   "author": "sebinside",
   "dependencies": {

@@ -1,0 +1,20 @@
+{
+  "startStopKey": "K",
+  "keys": [
+    {
+      "key": "K",
+      "name": "Default",
+      "color": 0
+    },
+    {
+      "key": "J",
+      "name": "Facecam",
+      "color": 1
+    },
+    {
+      "key": "H",
+      "name": "Game",
+      "color": 2
+    }
+  ]
+}
