@@ -1,0 +1,10 @@
+{
+  "name": "metarec",
+  "version": "1.0.0",
+  "description": "Enhance your recording with metadata",
+  "main": "index.js",
+  "author": "sebinside",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
