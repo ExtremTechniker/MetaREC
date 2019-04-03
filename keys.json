@@ -1,5 +1,7 @@
 {
   "startStopKey": "K",
+  "metaDataFolder": "E:/code/MetaREC/testing",
+  "metaFileNameFormat": "YYYY-MM-DD HH-mm-ss",
   "keys": [
     {
       "key": "K",
