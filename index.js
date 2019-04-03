@@ -105,7 +105,7 @@ function logMetaData(key, keyType) {
         // while recording, everything is logged
         if (key === keys.startStopKey) {
             isRecording = false;
-            console.log("Ended recording.")
+            console.log("Stopped recording.")
         }
         writeMetaData(message);
     } else {
@@ -122,7 +122,7 @@ function logMetaData(key, keyType) {
 
             writeMetaData(message)
         } else {
-            console.log("Warning: No current recording. Start with Start/Stop key.")
+            console.log("Warning: Currently not recording. Start with Start/Stop key.")
         }
     }
 }
