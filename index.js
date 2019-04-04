@@ -120,6 +120,7 @@ function logMetaData(key, keyType) {
             // Set init date
             currentStartDate = moment();
 
+            writeMetaDataHeader(`Hour,Minute,Second,Millisecond,Mode,KeyType,Color`);
             writeMetaData(message)
         } else {
             console.log("Warning: Currently not recording. Start with Start/Stop key.")
@@ -127,6 +128,23 @@ function logMetaData(key, keyType) {
     }
 }
 
+/**
+ * Enhances the csv-style-message with the current timestamp and appends it to the metadata file.
+ * @param message the message to log
+ */
+function writeMetaDataHeader(message) {
+
+    // Time difference of starting timestamp and now
+    let timeDiff = moment.duration(moment().diff(currentStartDate));
+    let timeStamp = `${timeDiff.hours()},${timeDiff.minutes()},${timeDiff.seconds()},${timeDiff.milliseconds()}`;
+
+
+    let content = `${message}`;
+    console.log(`Logging metadata: "${content}"`);
+    fs.appendFileSync(currentFileName, `${content}\n`, err => {
+        if (err) throw err
+    });
+}
 /**
  * Enhances the csv-style-message with the current timestamp and appends it to the metadata file.
  * @param message the message to log
